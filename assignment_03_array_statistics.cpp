@@ -56,8 +56,8 @@ double calculateAverage(int arr[], int n) {
 }
 
 int calculateMax(int arr[], int n) {
-    int max = arr[0];              // start by assuming first value is biggest
-    for (int i = 1; i < n; i++) {  // start at 1, since arr[0] is already "max"
+    int max = arr[0];              
+    for (int i = 1; i < n; i++) {  
         if (arr[i] > max) {
             max = arr[i];
         }
@@ -75,5 +75,33 @@ int calculateMin(int arr[], int n) {
     return min;
 }
  int main() {
+    int n;
+    cout << "How many numbers? ";
+    cin >> n;
+
+    if (n <= 0) {
+        cout << "Error: Number of elements must be a positive integer." << endl;
+        return 1;  
+    }
+
+    int* arr = new int[n];  
+
+    for (int i = 0; i < n; i++) {
+        cout << "Enter number " << (i + 1) << ": ";
+        cin >> arr[i];
+    }
+
+    int sum = calculateSum(arr, n);
+    double average = calculateAverage(arr, n);
+    int max = calculateMax(arr, n);
+    int min = calculateMin(arr, n);
+
+    cout << "\nResults:" << endl;
+    cout << "Sum:     " << sum << endl;
+    cout << "Average: " << average << endl;
+    cout << "Maximum: " << max << endl;
+    cout << "Minimum: " << min << endl;
+
+    delete[] arr;  
     return 0;
  }
