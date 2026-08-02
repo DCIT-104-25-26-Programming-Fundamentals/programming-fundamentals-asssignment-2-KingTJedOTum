@@ -42,3 +42,38 @@
 #include <iostream>
 using namespace std;
 
+int calculateSum(int arr[], int n) {
+    int sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum = sum + arr[i];
+    }
+    return sum;
+}
+
+double calculateAverage(int arr[], int n) {
+    int sum = calculateSum(arr, n);
+    return (double)sum / n;
+}
+
+int calculateMax(int arr[], int n) {
+    int max = arr[0];              // start by assuming first value is biggest
+    for (int i = 1; i < n; i++) {  // start at 1, since arr[0] is already "max"
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+
+int calculateMin(int arr[], int n) {
+    int min = arr[0];
+    for (int i = 1; i < n; i++) {
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+    }
+    return min;
+}
+ int main() {
+    return 0;
+ }
