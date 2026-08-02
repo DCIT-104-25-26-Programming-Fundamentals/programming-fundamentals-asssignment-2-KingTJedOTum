@@ -86,5 +86,26 @@ void tablesFromOneToN(int n) {
 
 
 int main() {
-     return 0;
+    int choice;
+    cout << "Multiplication Table Menu:" << endl;
+    cout << "1) Single table\n2) Tables from 1 to N\nChoose an option: ";
+    if (!(cin >> choice)) return 0;
+
+    if (choice == 1) {
+        int number;
+        cout << "Enter a number: ";
+        if (!(cin >> number)) return 0;
+        singleTable(number);
+    } else if (choice == 2) {
+        int n;
+        cout << "Enter N (positive integer): ";
+        if (!(cin >> n)) return 0;
+        if (n <= 0) {
+            cout << "Error: N must be a positive integer." << endl;
+            return 0;
+        }
+        tablesFromOneToN(n);
+    }
+
+    return 0;
 }
