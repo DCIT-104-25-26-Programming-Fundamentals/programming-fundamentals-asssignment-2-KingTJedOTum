@@ -57,3 +57,34 @@
 #include <iostream>
 using namespace std;
 
+void singleTable(int number) {
+
+    cout << "Multiplication Table for " << number << ":" << endl;
+
+    for (int i = 1; i <= 12; i++) {
+        cout << number << " x " << i << " = "
+             << number * i << endl;
+    }
+}
+
+
+void tablesFromOneToN(int n) {
+
+    for (int number = 1; number <= n; number++) {
+
+        cout << "Multiplication Table for "
+             << number << ":" << endl;
+
+        for (int i = 1; i <= 12; i++) {
+            cout << number << " x " << i << " = "
+                 << number * i << endl;
+        }
+
+        cout << "---------------------------" << endl;
+    }
+}
+
+
+int main() {
+     return 0;
+}
