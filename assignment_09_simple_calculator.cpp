@@ -73,3 +73,53 @@
 #include <cmath>
 using namespace std;
 
+void add(double a, double b) {
+    cout << fixed << setprecision(2) << a << " + " << b << " = " << (a + b) << endl;
+}
+
+
+void subtract(double a, double b) {
+    cout << fixed << setprecision(2) << a << " - " << b << " = " << (a - b) << endl;
+}
+void multiply(double a, double b) {
+    cout << fixed << setprecision(2) << a << " * " << b << " = " << (a * b) << endl;
+}
+
+void divide(double a, double b) {
+    if (b == 0) {
+        cout << "Error: Cannot divide by zero." << endl;
+    } else {
+        cout << fixed << setprecision(2) << a << " / " << b << " = " << (a / b) << endl;
+    }
+}
+
+void modulus(int a, int b) {
+    if (b == 0) {
+        cout << "Error: Cannot perform modulus by zero." << endl;
+    } else {
+        cout << a << " % " << b << " = " << (a % b) << endl;
+    }
+}
+
+void exponentiate(double base, double exponent) {
+    cout << fixed << setprecision(2) << base << " ^ " << exponent << " = " << pow(base, exponent) << endl;
+}
+
+void displayMenu() {
+    cout << "============================" << endl;
+    cout << "       SIMPLE CALCULATOR" << endl;
+    cout << "============================" << endl;
+    cout << "1. Addition" << endl;
+    cout << "2. Subtraction" << endl;
+    cout << "3. Multiplication" << endl;
+    cout << "4. Division" << endl;
+    cout << "5. Modulus" << endl;
+    cout << "6. Exponentiation" << endl;
+    cout << "7. Quit" << endl;
+    cout << "Select an operation (1-7): ";
+}
+
+int main() {
+
+    return 0;
+}
