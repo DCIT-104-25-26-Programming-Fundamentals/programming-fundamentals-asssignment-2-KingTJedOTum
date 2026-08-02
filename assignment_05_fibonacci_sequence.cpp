@@ -51,3 +51,26 @@
 #include <iostream>
 using namespace std;
 
+void printFibonacci(int n) {
+
+    int first = 0;
+    int second = 1;
+
+    cout << "Fibonacci sequence: ";
+
+    for (int i = 0; i < n; i++) {
+
+        cout << first << " ";
+
+        int next = first + second;
+
+        first = second;
+        second = next;
+    }
+
+    cout << endl;
+}
+
+int main() {
+    return 0;
+}
