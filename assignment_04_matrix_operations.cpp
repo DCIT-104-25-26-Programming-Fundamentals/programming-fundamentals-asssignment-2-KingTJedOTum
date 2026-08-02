@@ -126,5 +126,49 @@ void readMatrix(int matrix[10][10], int rows, int cols) {
 }
 
 int main() {
+    int choice;
+    cout << "Matrix Operations Menu:" << endl;
+    cout << "1. Transpose a Matrix" << endl;
+    cout << "2. Add Two Matrices" << endl;
+    cout << "3. Multiply Two Matrices" << endl;
+    cout << "Enter your choice (1-3): ";
+    cin >> choice;
+
+    if (choice == 1) {
+        int rows, cols, matrix[10][10];
+        cout << "Enter number of rows: ";
+        cin >> rows;
+        cout << "Enter number of columns: ";
+        cin >> cols;
+        readMatrix(matrix, rows, cols);
+        transposeMatrix(matrix, rows, cols);
+    } else if (choice == 2) {
+        int rows, cols, a[10][10], b[10][10];
+        cout << "Enter number of rows: ";
+        cin >> rows;
+        cout << "Enter number of columns: ";
+        cin >> cols;
+        cout << "Matrix A:" << endl;
+        readMatrix(a, rows, cols);
+        cout << "Matrix B:" << endl;
+        readMatrix(b, rows, cols);
+        addMatrices(a, b, rows, cols);
+    } else if (choice == 3) {
+        int m, n, p, a[10][10], b[10][10];
+        cout << "Enter number of rows for Matrix A: ";
+        cin >> m;
+        cout << "Enter number of columns for Matrix A (and rows for Matrix B): ";
+        cin >> n;
+        cout << "Enter number of columns for Matrix B: ";
+        cin >> p;
+        cout << "Matrix A:" << endl;
+        readMatrix(a, m, n);
+        cout << "Matrix B:" << endl;
+        readMatrix(b, n, p);
+        multiplyMatrices(a, b, m, n, p);
+    } else {
+        cout << "Invalid choice." << endl;
+    }
+
     return 0;
 }
